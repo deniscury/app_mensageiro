@@ -1,37 +1,35 @@
 <?php
     namespace src;
 
-    class Mensageiro{
-        protected $canal;
+    use src\interfaces\IMensagem;
 
-        public function __construct($canal){
-            $this->setCanal($canal);
+    class Mensageiro{
+        protected $classe;
+
+        public function __construct(IMensagem $classe){
+            $this->setClasse($classe);
         }
         
         public function enviarToken(): void{
-            $classe = '\src\\'.ucfirst($this->getCanal());
-
-            $retorno = new $classe();
-            
-            echo $retorno->enviar();
+            echo $this->getClasse()->enviar();
         }
 
         /**
-         * Get the value of canal
+         * Get the value of classe
          */ 
-        public function getCanal()
+        public function getClasse()
         {
-                return $this->canal;
+                return $this->classe;
         }
 
         /**
-         * Set the value of canal
+         * Set the value of classe
          *
          * @return  self
          */ 
-        public function setCanal($canal)
+        public function setClasse(IMensagem $classe)
         {
-                $this->canal = $canal;
+                $this->classe = $classe;
 
                 return $this;
         }
