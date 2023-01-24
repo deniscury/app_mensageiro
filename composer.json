@@ -1,0 +1,15 @@
+{
+    "name": "denis/app_mensageiro",
+    "autoload": {
+        "psr-4": {
+            "Denis\\AppMensageiro\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "denim95",
+            "email": "99043807+denim95@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
