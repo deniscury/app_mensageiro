@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Denis\\AppMensageiro\\' => array($baseDir . '/src'),
+    'src\\' => array($baseDir . '/src'),
 );

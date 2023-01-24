@@ -2,7 +2,7 @@
     "name": "denis/app_mensageiro",
     "autoload": {
         "psr-4": {
-            "Denis\\AppMensageiro\\": "src/"
+            "src\\": "src/"
         }
     },
     "authors": [
